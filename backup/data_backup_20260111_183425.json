@@ -1,0 +1,164 @@
+{
+  "config": {
+    "admin_password_hash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
+    "polling_interval": 5000
+  },
+  "meta": {
+    "last_updated": 1768122750,
+    "updated_by": "管理者",
+    "version": "7bf26b61-521d-4b7c-bba4-72b0fafd9d7f"
+  },
+  "tasks": [
+    {
+      "assignee_id": "u1",
+      "dependencies": [],
+      "end": "2026-01-10",
+      "id": "t-001",
+      "is_milestone": false,
+      "name": "プロジェクト計画",
+      "parent_id": null,
+      "progress": 100,
+      "start": "2026-01-06"
+    },
+    {
+      "assignee_id": "u1",
+      "dependencies": [
+        "t-001"
+      ],
+      "end": "2026-01-24",
+      "id": "t-002",
+      "is_milestone": false,
+      "name": "要件定義",
+      "parent_id": null,
+      "progress": 80,
+      "start": "2026-01-13"
+    },
+    {
+      "assignee_id": "u2",
+      "dependencies": [],
+      "end": "2026-01-17",
+      "id": "t-003",
+      "is_milestone": false,
+      "name": "要件ヒアリング",
+      "parent_id": "t-002",
+      "progress": 100,
+      "start": "2026-01-13"
+    },
+    {
+      "assignee_id": "u1",
+      "dependencies": [
+        "t-003"
+      ],
+      "end": "2026-01-24",
+      "id": "t-004",
+      "is_milestone": false,
+      "name": "要件書作成",
+      "parent_id": "t-002",
+      "progress": 60,
+      "start": "2026-01-20"
+    },
+    {
+      "assignee_id": "u3",
+      "dependencies": [
+        "t-002"
+      ],
+      "end": "2026-02-07",
+      "id": "t-005",
+      "is_milestone": false,
+      "name": "設計",
+      "parent_id": null,
+      "progress": 30,
+      "start": "2026-01-27"
+    },
+    {
+      "assignee_id": "u3",
+      "dependencies": [],
+      "end": "2026-01-31",
+      "id": "t-006",
+      "is_milestone": false,
+      "name": "基本設計",
+      "parent_id": "t-005",
+      "progress": 50,
+      "start": "2026-01-27"
+    },
+    {
+      "assignee_id": "u4",
+      "dependencies": [
+        "t-006"
+      ],
+      "end": "2026-02-07",
+      "id": "t-007",
+      "is_milestone": false,
+      "name": "詳細設計",
+      "parent_id": "t-005",
+      "progress": 10,
+      "start": "2026-02-03"
+    },
+    {
+      "assignee_id": null,
+      "dependencies": [
+        "t-005"
+      ],
+      "end": "2026-02-28",
+      "id": "t-008",
+      "is_milestone": false,
+      "name": "実装",
+      "parent_id": null,
+      "progress": 0,
+      "start": "2026-02-10"
+    },
+    {
+      "assignee_id": null,
+      "dependencies": [
+        "t-008"
+      ],
+      "end": "2026-03-13",
+      "id": "t-009",
+      "is_milestone": false,
+      "name": "テスト",
+      "parent_id": null,
+      "progress": 0,
+      "start": "2026-03-02"
+    },
+    {
+      "assignee_id": "u1",
+      "dependencies": [
+        "t-009"
+      ],
+      "end": "2026-03-16",
+      "id": "t-010",
+      "is_milestone": true,
+      "name": "リリース",
+      "parent_id": null,
+      "progress": 0,
+      "start": "2026-03-16"
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "田中",
+      "role": "member"
+    },
+    {
+      "id": "u2",
+      "name": "佐藤",
+      "role": "member"
+    },
+    {
+      "id": "u3",
+      "name": "鈴木",
+      "role": "member"
+    },
+    {
+      "id": "u4",
+      "name": "高橋",
+      "role": "member"
+    },
+    {
+      "id": "u1768122750442",
+      "name": "user_batch_test",
+      "role": "member"
+    }
+  ]
+}

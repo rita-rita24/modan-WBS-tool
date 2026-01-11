@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+/* ========================================
+   Portable WBS Tool - Monotone Theme
+   ======================================== */
+
+/* Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Monotone / High Contrast */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-bg-tertiary: #f1f5f9;
+  --color-bg-card: #ffffff;
+
+  --color-accent-primary: #1e293b;
+  /* Dark Slate */
+  --color-accent-secondary: #334155;
+  --color-accent-glow: rgba(0, 0, 0, 0.1);
+
+  --color-success: #15803d;
+  --color-warning: #b45309;
+  --color-error: #b91c1c;
+
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94a3b8;
+
+  --color-border: #e2e8f0;
+  --color-border-hover: #cbd5e1;
+
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background: var(--color-bg-secondary);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  /* Prevent body scroll */
+  background: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+#root {
+  height: 100vh;
+}
+
+/* ========================================
+   Cards (Simple Clean Design)
+   ======================================== */
+.glass-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background: var(--color-accent-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-secondary);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-border-hover);
+}
+
+/* ========================================
+   Form Elements
+   ======================================== */
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text-primary);
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 1px var(--color-accent-primary);
+}
+
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23475569' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 32px;
+}
+
+/* ========================================
+   Gantt Chart Custom Styles (Monotone)
+   ======================================== */
+._3_ygE {
+  /* Gantt wrapper */
+  background: transparent !important;
+}
+
+._2B2zv {
+  /* Gantt scroll container */
+  scrollbar-width: thin;
+}
+
+._34SS0 {
+  /* Task bar */
+  border-radius: 2px !important;
+}
+
+._3T42e {
+  /* Grid header */
+  background: #f8fafc !important;
+  color: var(--color-text-secondary) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  border-right: 1px solid var(--color-border) !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+._2dZTy {
+  /* Grid row */
+  background: white !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+._2dZTy:nth-child(even) {
+  background: #fcfcfc !important;
+}
+
+._KxSXS {
+  /* Calendar header */
+  background: #f8fafc !important;
+  color: var(--color-text-secondary) !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  font-size: 12px !important;
+}
+
+/* Hide original grid since we have our own left panel */
+._1nBOt {
+  /* Grid container */
+  display: none !important;
+}
+
+/* ========================================
+   Animations, Utilities ...
+   ======================================== */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

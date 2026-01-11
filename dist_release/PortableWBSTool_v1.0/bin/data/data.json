@@ -1,0 +1,12 @@
+{
+  "users": [],
+  "tasks": [],
+  "meta": {
+    "version": "1.0.0",
+    "last_updated": 1768123850,
+    "created_at": "2026-01-11T18:30:50.781094"
+  },
+  "config": {
+    "admin_password_hash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+  }
+}
