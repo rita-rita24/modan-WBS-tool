@@ -4,11 +4,13 @@
 
 ## ダウンロード
 
-| OS | ファイル | 備考 |
-|----|----------|------|
-| **Windows (64bit)** | `Portable-WBS-Tool-win.zip` | Windows 10/11 |
-| **Mac (Apple Silicon)** | `Portable-WBS-Tool-arm64-mac.zip` | M1/M2/M3 Mac |
-| **Mac (Intel)** | `Portable-WBS-Tool-mac.zip` | Intel Mac |
+| OS | ダウンロード | 備考 |
+|----|-------------|------|
+| **Windows (64bit)** | [📥 Portable WBS Tool-1.0.0-win.zip](https://github.com/rita-rita24/modan-WBS-tool/releases/download/v1.0.0/Portable.WBS.Tool-1.0.0-win.zip) | Windows 10/11 |
+| **Mac (Apple Silicon)** | [📥 Portable WBS Tool-1.0.0-arm64-mac.zip](https://github.com/rita-rita24/modan-WBS-tool/releases/download/v1.0.0/Portable.WBS.Tool-1.0.0-arm64-mac.zip) | M1/M2/M3/M4 Mac |
+| **Mac (Intel)** | [📥 Portable WBS Tool-1.0.0-mac.zip](https://github.com/rita-rita24/modan-WBS-tool/releases/download/v1.0.0/Portable.WBS.Tool-1.0.0-mac.zip) | Intel Mac |
+
+> 💡 [すべてのリリースを見る](https://github.com/rita-rita24/modan-WBS-tool/releases)
 
 ## インストール方法
 

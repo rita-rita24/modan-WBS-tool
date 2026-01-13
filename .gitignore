@@ -22,3 +22,6 @@ npm-debug.log*
 # Environment
 .env
 .env.local
+
+# Release zip files (uploaded to GitHub Releases)
+*.zip
