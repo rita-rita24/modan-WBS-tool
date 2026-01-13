@@ -1,0 +1,29 @@
+{
+  "config": {
+    "admin_password_hash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+  },
+  "meta": {
+    "version": "456189db-273f-4bcc-b804-f53e3e873dc7",
+    "last_updated": 1768317281
+  },
+  "tasks": [
+    {
+      "id": "t-001",
+      "name": "サンプルプロジェクト",
+      "start": "2026-01-14",
+      "end": "2026-01-21",
+      "assignee_id": "u1",
+      "parent_id": null,
+      "progress": 0,
+      "is_milestone": false,
+      "dependencies": []
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "管理者",
+      "role": "admin"
+    }
+  ]
+}

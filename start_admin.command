@@ -1,17 +1,26 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 
-# 仮想環境の確認と作成
-if [ ! -d ".venv" ]; then
-    echo "Creating virtual environment..."
-    python3 -m venv .venv
-    source .venv/bin/activate
-    echo "Installing dependencies..."
-    pip install -r bin/app/requirements.txt
-else
-    source .venv/bin/activate
-fi
+echo "================================"
+echo " Portable WBS Tool [管理者モード]"
+echo "================================"
+echo ""
 
-# 管理者モードで起動
-export WBS_MODE=admin
-python bin/app/server.py
+# 環境変数設定
+export WBS_DATA_PATH="$(pwd)/data/wbs_data.json"
+export WBS_MODE="admin"
+export WBS_PORT="8080"
+
+echo "データファイル: $WBS_DATA_PATH"
+echo "モード: 管理者"
+echo "ポート: $WBS_PORT"
+echo ""
+
+# Pythonの実行
+if [ -f "python/python" ]; then
+    echo "Python: 同梱版を使用"
+    ./python/python server/server.py
+else
+    echo "Python: システムPythonを使用"
+    python3 server/server.py
+fi

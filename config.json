@@ -1,0 +1,6 @@
+{
+  "data_path": "./data/wbs_data.json",
+  "mode": "admin",
+  "user_id": "",
+  "port": 8080
+}

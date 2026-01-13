@@ -7,33 +7,23 @@ echo  Portable WBS Tool [管理者モード]
 echo ================================
 echo.
 
-REM 設定ファイルの存在確認
-if not exist config.ini (
-    echo [エラー] config.ini が見つかりません。
-    pause
-    exit /b 1
-)
+REM 環境変数設定
+set WBS_DATA_PATH=%~dp0data\wbs_data.json
+set WBS_MODE=admin
+set WBS_PORT=8080
 
-REM Python実行環境の確認
-if exist bin\python-embed\python.exe (
-    set PYTHON_EXE=bin\python-embed\python.exe
-) else (
-    where python >nul 2>&1
-    if %errorlevel%==0 (
-        set PYTHON_EXE=python
-    ) else (
-        echo [エラー] Python が見つかりません。
-        pause
-        exit /b 1
-    )
-)
-
-echo Python: %PYTHON_EXE%
+echo データファイル: %WBS_DATA_PATH%
 echo モード: 管理者
+echo ポート: %WBS_PORT%
 echo.
 
-REM 管理者モードでサーバー起動
-set WBS_MODE=admin
-%PYTHON_EXE% bin\app\server.py
+REM Pythonの実行
+if exist python\python.exe (
+    echo Python: 同梱版を使用
+    python\python.exe server\server.py
+) else (
+    echo Python: システムPythonを使用
+    python server\server.py
+)
 
 pause
